@@ -1,1 +1,100 @@
 @use "./base" as *;
+
+header {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 15px;
+  justify-content: space-between;
+
+  nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .mobile-menu-dropdown {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .open-menu-btn, .close-menu-btn {
+      background-color: transparent;
+      border: transparent;
+
+      @include for-tablets-and-up {
+        display: none;
+      }
+    }
+  
+    ul {
+      display: flex;
+      gap: 30px;
+
+      .features {
+        position: relative;
+        
+        a {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        .features-dropdown {
+          position: absolute;
+          top: 40px;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          background-color: white;
+          padding: 30px;
+          border-radius: 15px;
+          width: 170px;
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+          }
+        }
+      }
+    }
+
+    .header-btns {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  @include for-phones-only {
+    position: relative;
+    
+    .mobile-menu-btns {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+    }
+
+    .mobile-menu-dropdown {
+      flex-direction: column;
+      position: absolute;
+      max-width: 100px;
+      top: 0;
+      right: 0;
+
+      .header-btns {
+        flex-direction: column;
+      }
+    }
+
+    ul {
+      flex-direction: column;
+    }
+  }
+}
+
+.display-none {
+  display: none;
+}

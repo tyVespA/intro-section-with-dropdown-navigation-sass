@@ -1,2 +1,13 @@
 @use "./base" as *;
 
+header {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 15px;
+
+  .header-btns {
+    display: flex;
+    gap: 20px;
+  }
+}

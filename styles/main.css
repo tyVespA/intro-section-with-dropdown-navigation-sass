@@ -61,6 +61,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /*------------------------------------*\
+  #MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
   #COLORS
 \*------------------------------------*/
 /*------------------------------------*\
@@ -70,4 +73,123 @@ body {
   font-family: "Epilogue", sans-serif;
   background-color: hsl(0deg, 0%, 98%);
   color: hsl(0deg, 0%, 8%);
+}
+
+/*------------------------------------*\
+  #BASE TWEAKS
+\*------------------------------------*/
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.display-none {
+  display: none !important;
+}
+
+header {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 15px;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+header nav .mobile-menu-dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header nav .open-menu-btn, header nav .close-menu-btn {
+  background-color: transparent;
+  border: transparent;
+}
+@media (min-width: 900px) {
+  header nav .open-menu-btn, header nav .close-menu-btn {
+    display: none;
+  }
+}
+header nav ul {
+  display: flex;
+  gap: 30px;
+}
+header nav ul .features {
+  position: relative;
+}
+header nav ul .features a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+header nav ul .features .features-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 170px;
+}
+header nav ul .features .features-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header nav .header-btns {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 899px) {
+  header {
+    position: relative;
+  }
+  header .mobile-menu-btns {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+  header .mobile-menu-dropdown {
+    flex-direction: column;
+    position: absolute;
+    max-width: 100px;
+    top: 0;
+    right: 0;
+  }
+  header .mobile-menu-dropdown .header-btns {
+    flex-direction: column;
+  }
+  header ul {
+    flex-direction: column;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+header {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 15px;
+}
+header .header-btns {
+  display: flex;
+  gap: 20px;
 }/*# sourceMappingURL=main.css.map */

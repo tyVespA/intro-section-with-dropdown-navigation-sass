@@ -60,6 +60,21 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 /*------------------------------------*\
+  #MIXINS
+\*------------------------------------*/
+
+@mixin for-phones-only {
+  @media (max-width:899px) { @content; }
+}
+
+@mixin for-tablets-and-up {
+  @media (min-width: 900px) { @content; }
+}
+
+
+
+
+/*------------------------------------*\
   #COLORS
 \*------------------------------------*/
 
@@ -79,4 +94,31 @@ body {
   font-family: 'Epilogue', sans-serif;
   background-color: $neutral-100;
   color: $neutral-900;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #BASE TWEAKS
+\*------------------------------------*/
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.display-none {
+  display: none !important;
 }

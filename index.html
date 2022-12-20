@@ -14,14 +14,57 @@
 </head>
 <body>
 
-  Features
-  Company
-  Careers
-  About
+  <header>
+    <img src="./images/logo.svg" alt="logo">
+    <nav>
+      <div class="mobile-menu-btns">
+        <button class="open-menu-btn">
+          <img src="./images/icon-menu.svg" alt="">
+        </button>
+        <button class="close-menu-btn display-none">
+          <img src="./images/icon-close-menu.svg" alt="">
+        </button>
+      </div>
+      <div class="mobile-menu-dropdown">
+        <div class="links">
+          <ul>
+            <li class="features">
+              <a href="#">
+                Features 
+                <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg></a>
+              <ul class="features-dropdown display-none">
+                <li>
+                  <a href="#"><img src="./images/icon-todo.svg" alt=""> Todo List</a>
+                </li>
+                <li><a href="#"><img src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
+                <li><a href="#"><img src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
+                <li><a href="#"><img src="./images/icon-planning.svg" alt=""> Planning</a></li>
+              </ul>
+            </li>
+            <li class="company"><a href="#">Company</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="header-btns">
+          <button class="login">Login</button>
+          <button class="register">Register</button>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  Login
-  Register
+  <main>
+    <div class="hero-text">
 
+    </div>
+    <div class="hero-img">
+      <picture>
+        <source media="(min-width: 900px)" srcset="./images/image-hero-desktop.png">
+        <img src="./images/image-hero-mobile.png" alt="">
+      </picture>
+    </div>
+  </main>
   Make remote work
 
   Get your team in sync, no matter your location. Streamline processes, 
